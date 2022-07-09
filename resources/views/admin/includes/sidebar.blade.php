@@ -10,31 +10,15 @@
                 <a href="{{ route('admin.main.index') }}" class="nav-link">
                     <i class="nav-icon fa-solid fa-house"></i>
                     <p>
-                        Главная
+                        Main
                     </p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('admin.user.index') }}" class="nav-link">
-                    <i class="nav-icon fa-solid fa-users"></i>
-                    <p>
-                        Пользователи
-                    </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('admin.post.index') }}" class="nav-link">
+                <a href="{{ route('admin.task.index') }}" class="nav-link">
                     <i class="nav-icon fa-solid fa-clipboard"></i>
                     <p>
-                        Посты
-                    </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('admin.category.index') }}" class="nav-link">
-                    <i class="nav-icon fa-solid fa-bars"></i>
-                    <p>
-                        Категории
+                        Tasks
                     </p>
                 </a>
             </li>
@@ -42,7 +26,7 @@
                 <a href="{{ route('admin.tag.index') }}" class="nav-link">
                     <i class="nav-icon fa-solid fa-tags"></i>
                     <p>
-                        Тэги
+                        Tags
                     </p>
                 </a>
             </li>

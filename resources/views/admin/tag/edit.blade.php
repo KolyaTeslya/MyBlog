@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Редактирование тэга</h1>
+                        <h1 class="m-0">Editing tag</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная</a></li>
-                            <li class="breadcrumb-item active">Редактирование тэга</li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Main</a></li>
+                            <li class="breadcrumb-item active">Editing tag</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -30,14 +30,14 @@
                             @csrf
                             @method('PATCH')
                             <div class="form-group">
-                                <label>название</label>
-                                <input type="text" class="form-control" name="title" placeholder="Название тэга"
+                                <label>Name</label>
+                                <input type="text" class="form-control" name="title" placeholder="Name tag"
                                 value="{{ $tag->title }}">
                                 @error('title')
-                                <div class="text-danger">Это поле необходимо для заполнения</div>
+                                <div class="text-danger">This is required field.</div>
                                 @enderror
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Обновить">
+                            <input type="submit" class="btn btn-primary" value="Update">
                         </form>
                     </div>
                     <!-- ./col -->

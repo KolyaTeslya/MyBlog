@@ -7,12 +7,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tags</h1>
+                    <h1 class="m-0">Tasks</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Main</a></li>
-                        <li class="breadcrumb-item active">Tags</li>
+                        <li class="breadcrumb-item active">Tasks</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -26,7 +26,7 @@
             <!-- Small boxes (Stat box) -->
             <div class="row">
                 <div class="col-2 mb-3">
-                    <a href="{{route('admin.tag.create')}}" class="btn btn-block btn-primary">Add</a>
+                    <a href="{{route('admin.task.create')}}" class="btn btn-block btn-primary">Add</a>
                 </div>
                 <div class="col-12"></div>
                 <div class="card">
@@ -41,16 +41,16 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($tags as $tag)
+                            @foreach($tasks as $task)
                             <tr>
-                                <td>{{ $tag->id}}</td>
-                                <td>{{ $tag->title}}</td>
-                                <td class="text-center"><a href="{{route('admin.tag.show', $tag->id )}}"> <i
+                                <td>{{ $task->id}}</td>
+                                <td>{{ $task->title}}</td>
+                                <td class="text-center"><a href="{{route('admin.task.show', $task->id )}}"> <i
                                             class="fa-solid fa-eye"></i></a></td>
-                                <td class="text-center"><a href="{{route('admin.tag.edit', $tag->id )}}"
+                                <td class="text-center"><a href="{{route('admin.task.edit', $task->id )}}"
                                        class="text-success"> <i class="fa-solid fa-pen"></i></a></td>
                                 <td class="text-center">
-                                    <form action="{{ route('admin.tag.delete', $tag->id) }}"
+                                    <form action="{{ route('admin.task.delete', $task->id) }}"
                                           method="POST">
                                         @csrf
                                         @method('DELETE')
