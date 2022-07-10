@@ -44,8 +44,12 @@
                                 <td>{{ $tag->id}}</td>
                             </tr>
                             <tr>
-                                <td>Название</td>
+                                <td>Name</td>
                                 <td>{{ $tag->title}}</td>
+                            </tr>
+                            <tr>
+                                <td>Date of creation</td>
+                                <td>{{ $tag->created_at}}</td>
                             </tr>
                             </tbody>
                         </table>

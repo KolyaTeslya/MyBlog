@@ -28,7 +28,7 @@
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>{{ $data['usersCount'] }}</h3>
+
 
                             <p>Пользователи</p>
                         </div>
@@ -43,7 +43,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>{{ $data['tasksCount'] }}<sup style="font-size: 20px"></sup></h3>
+
 
                             <p>Tasks</p>
                         </div>
@@ -58,7 +58,7 @@
                     <!-- small box -->
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>{{ $data['tagsCount'] }}</h3>
+
 
                             <p>Тэги</p>
                         </div>

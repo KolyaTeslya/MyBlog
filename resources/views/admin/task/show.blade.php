@@ -45,8 +45,16 @@
                                 <td>{{ $task->id}}</td>
                             </tr>
                             <tr>
-                                <td>Название</td>
+                                <td>Name</td>
                                 <td>{{ $task->title}}</td>
+                            </tr>
+                            <tr>
+                                <td>Date of creation</td>
+                                <td>{{ $task->created_at->format('m-d-y')}}</td>
+                            </tr>
+                            <tr>
+                                <td>Tags</td>
+                                <td> {{ '' }} </td>
                             </tr>
                             </tbody>
                         </table>
