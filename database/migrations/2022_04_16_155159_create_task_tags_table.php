@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostTagsTable extends Migration
+class CreateTaskTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,21 @@ class CreatePostTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_tags', function (Blueprint $table) {
+        Schema::create('task_tags', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('post_id');
+            $table->unsignedBigInteger('task_id');
             $table->unsignedBigInteger('tag_id');
 
             $table->timestamps();
 
             // IDX
-            $table->index('post_id', 'post_tag_post_idx');
-            $table->index('tag_id', 'post_tag_tag_idx');
+            $table->index('task_id', 'task_tag_task_idx');
+            $table->index('tag_id', 'task_tag_tag_idx');
 
             // FK
-            $table->foreign('post_id', 'post_tag_post_fk')->on('posts')->references('id');
-            $table->foreign('tag_id', 'post_tag_tag_fk')->on('tags')->references('id');
+            $table->foreign('task_id', 'task_tag_task_fk')->on('tasks')->references('id');
+            $table->foreign('tag_id', 'task_tag_tag_fk')->on('tags')->references('id');
         });
     }
 
@@ -38,6 +38,6 @@ class CreatePostTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_tags');
+        Schema::dropIfExists('task_tags');
     }
 }

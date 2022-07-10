@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DropColumnPostIdToCategoriesTable extends Migration
+class AddSoftDeletesToPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class DropColumnPostIdToCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::table('categories', function (Blueprint $table) {
-            $table->dropColumn('post_id');
+        Schema::table('tasks', function (Blueprint $table) {
+            $table->softDeletes();
         });
     }
 
@@ -25,8 +25,8 @@ class DropColumnPostIdToCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::table('categories', function (Blueprint $table) {
-            $table->unsignedBigInteger('post_id')->nullable();
+        Schema::table('tasks', function (Blueprint $table) {
+            $table->dropSoftDeletes();
         });
     }
 }
