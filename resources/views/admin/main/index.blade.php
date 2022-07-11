@@ -7,11 +7,11 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Главная</h1>
+                    <h1 class="m-0">Main</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item active">Главная</li>
+                        <li class="breadcrumb-item active">Main</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -47,7 +47,7 @@
                         <div class="inner">
 
 
-                            <p>Тэги</p>
+                            <p>Tags</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-pie-graph"></i>

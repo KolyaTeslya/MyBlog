@@ -47,8 +47,8 @@
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label>Тэги</label>
-                                    <select class="select2" name="tag_ids[]" multiple="multiple" data-placeholder="Выберите тэги"
+                                    <label>Tags</label>
+                                    <select class="select2" name="tag_ids[]" multiple="multiple" data-placeholder="Choose tags"
                                             style="width: 100%;">
                                         @foreach($tags as $tag)
                                             <option {{ is_array( $task->tags->pluck('id')->toArray() ) && in_array($tag->id, $task->tags->pluck('id')->toArray()) ? ' selected' : '' }} value="{{ $tag->id }}">{{ $tag->title }}</option>

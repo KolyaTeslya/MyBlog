@@ -46,7 +46,7 @@
                                 @enderror
                             </div>
                                 <div class="form-group w-50">
-                                    <label>Тэги</label>
+                                    <label>Tags</label>
                                     <select class="select2" name="tag_ids[]" multiple="multiple"
                                             data-placeholder="Choose tags"
                                             style="width: 100%;">
