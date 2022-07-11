@@ -37,6 +37,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>Created at</th>
                                 <th colspan="3" class="text-center">Action</th>
                             </tr>
                             </thead>
@@ -45,6 +46,7 @@
                             <tr>
                                 <td>{{ $tag->id}}</td>
                                 <td>{{ $tag->title}}</td>
+                                <td> {{ $tag->created_at}}</td>
                                 <td class="text-center"><a href="{{route('admin.tag.show', $tag->id )}}"> <i
                                             class="fa-solid fa-eye"></i></a></td>
                                 <td class="text-center"><a href="{{route('admin.tag.edit', $tag->id )}}"

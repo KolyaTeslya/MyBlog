@@ -37,6 +37,8 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>Content</th>
+                                <th>Created at</th>
                                 <th colspan="3" class="text-center">Action</th>
                             </tr>
                             </thead>
@@ -45,6 +47,8 @@
                             <tr>
                                 <td>{{ $task->id}}</td>
                                 <td>{{ $task->title}}</td>
+                                <td>{{ $task->content}}</td>
+                                <td>{{ $task->created_at}}</td>
                                 <td class="text-center"><a href="{{route('admin.task.show', $task->id )}}"> <i
                                             class="fa-solid fa-eye"></i></a></td>
                                 <td class="text-center"><a href="{{route('admin.task.edit', $task->id )}}"
